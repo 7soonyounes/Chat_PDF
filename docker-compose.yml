@@ -1,0 +1,23 @@
+version: '3'
+services:
+  backend:
+    build: 
+      context: ./server
+      dockerfile: Dockerfile
+    image: 7soonyounes/ai-container:chatpdf-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - app
+  frontend:
+    build: 
+      context: ./client
+      dockerfile: Dockerfile
+    image: 7soonyounes/ai-container:chatpdf-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge

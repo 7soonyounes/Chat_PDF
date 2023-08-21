@@ -1,0 +1,14 @@
+langchain
+transformers
+fastapi
+uvicorn
+pydantic
+python-multipart
+sqlalchemy
+openai
+pypdf
+faiss-cpu
+tiktoken
+python-dotenv
+sentence_transformers
+PyPDF2
