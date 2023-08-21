@@ -2,7 +2,7 @@
 
 ## Server
 
-The `server` folder contains the FastAPI backend of the application. FastAPI is a modern, fast, web framework for building APIs with Python 3.7+.
+The `server` folder contains the FastAPI backend of the application.
 
 ### Getting Started
 
@@ -47,6 +47,8 @@ You can pull the image using the following command:
 4. Run client image from docker desktop app on port 3000.
 5. Access app on  localhost:3000.
 
+##Youness AITHASSOUNE 
+##Have a GOOD DAY !!! 🚀
 
 
 
