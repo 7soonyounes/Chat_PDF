@@ -12,9 +12,11 @@ The `server` folder contains the FastAPI backend of the application.
    - On Windows: `venv\Scripts\activate`
    - On macOS and Linux: `source venv/bin/activate`
 4. Install the required dependencies: `pip install -r requirements.txt`
-5. Run the FastAPI server: `uvicorn main:app --host 0.0.0.0 --port 8000`
+5. go to server/.env and type your own OPENAI Key :bangbang: :bangbang:
+6. Run the FastAPI server: `uvicorn main:app --host 0.0.0.0 --port 8000`
 
 The FastAPI server should now be running at `http://localhost:8000`.
+
 
 ## Client
 
