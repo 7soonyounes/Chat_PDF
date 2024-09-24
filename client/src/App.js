@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import logo from "./muye-agency.png";
 import { uploadFile } from "./services/chat-pdf";
 import { fetchChat } from "./services/chat-pdf";
 import { FiUpload } from "react-icons/fi";
@@ -63,8 +64,10 @@ function App() {
       <div className="row">
         <div className="box conversations">
           <div className="top">
-            <h2 style={{ textAlign: "center" }}>Add PDF</h2>
-            <label className="new_convo" htmlFor="pdfInput">
+            <div className="logo-cont">
+              <img className="logo-img" src={logo} />
+            </div>
+            {/* <label className="new_convo" htmlFor="pdfInput">
               <div className="icon-container">
                 <FiUpload className="bigger-icon" />
               </div>
@@ -83,7 +86,7 @@ function App() {
               </button>
               <div className="file-name">{fileName}</div>
             </form>
-            <div className="spinner"></div>
+            <div className="spinner"></div> */}
           </div>
         </div>
 
@@ -113,6 +116,7 @@ function App() {
                   whiteSpace: "pre-wrap",
                   lineHeight: "3em",
                   verticalAlign: "middle",
+                  resize: "none"
                 }}
                 onKeyDown={handleKeyDown}
               ></textarea>

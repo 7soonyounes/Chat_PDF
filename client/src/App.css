@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --colour-1: #000000;
+  --colour-1: #0e0e0e;
   --colour-2: #ccc;
   --colour-3: #e4d4ff;
   --colour-4: #f0f0f0;
   --colour-5: #181818;
   --colour-6: #242424;
-
-  --accent: #8b3dff;
-  --blur-bg: #16101b66;
-  --blur-border: #84719040;
+  /* --accent: #8b3dff; */
+  --blur-bg: #161616;
+  --blur-border: #ffffff;
   --user-input: #ac87bb;
   --conversations: #c7a2ff;
 }
@@ -21,12 +20,23 @@
   --border-radius-1: 8px;
 }
 
+.logo-img {
+  width: 100%;
+  max-height: 20%;
+}
+
+.logo-cont {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
   font-family: var(--font-1);
+  height: 100%;
 }
 
 html,
@@ -39,7 +49,6 @@ body {
   padding: var(--section-gap);
   background: var(--colour-1);
   color: var(--colour-3);
-  min-height: 100vh;
 }
 
 .row {
@@ -60,6 +69,7 @@ body {
 
 .conversations {
   max-width: 260px;
+  height: 100%;
   padding: var(--section-gap);
   overflow: auto;
   flex-shrink: 0;
@@ -72,8 +82,8 @@ body {
 .conversation {
   width: 100%;
   min-height: 50%;
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100%;
+  /* overflow-y: scroll; */
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -353,11 +363,11 @@ label {
   transition: 0.33s;
 }
 
-input:checked + label {
+input:checked+label {
   background: var(--blur-border);
 }
 
-input:checked + label:after {
+input:checked+label:after {
   left: calc(100% - 5px - 20px);
 }
 
@@ -388,7 +398,7 @@ input:checked + label:after {
 }
 
 .disable-scrollbars {
-  scrollbar-width: none; 
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -614,6 +624,10 @@ a:-webkit-any-link {
   min-height: 80px;
 }
 
+.app-container {
+  height: 100%;
+}
+
 /* style for hljs copy */
 .hljs-copy-wrapper {
   position: relative;
@@ -683,7 +697,7 @@ a:-webkit-any-link {
   width: 1px;
 }
 
-.color-picker > fieldset {
+.color-picker>fieldset {
   border: 0;
   display: flex;
   width: fit-content;
@@ -818,14 +832,14 @@ a:-webkit-any-link {
 
 .new_convo {
   color: white;
-  width: 100px; 
-  height: 100px; 
-  margin: 0 auto; 
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .bigger-icon {
-  font-size: 48px; 
+  font-size: 48px;
 }
 
 .new_convo {
@@ -958,5 +972,5 @@ a:-webkit-any-link {
 }
 
 .send-icon {
-  font-size: 20px; 
+  font-size: 20px;
 }
