@@ -5,6 +5,8 @@ const endpoint = `http://localhost:8000/chat-pdf`
 export const fetchChat = async (params) => {
   try {
     const id = localStorage.getItem("fileId");
+    console.log(id);
+    if (id === null) { id = 1 }
     const response = await axios.post(endpoint + `/${id}`, params, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

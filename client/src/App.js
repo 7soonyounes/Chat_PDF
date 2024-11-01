@@ -45,7 +45,7 @@ function App() {
     if (newMessage) {
       try {
         const params = new URLSearchParams();
-        params.append("query", newMessage);
+        params.append("query", newMessage + "/n always answer in the same language as the query");
 
         const response = await fetchChat(params);
         const newMessages = [...messages, { text: newMessage, response }];
@@ -67,7 +67,7 @@ function App() {
             <div className="logo-cont">
               <img className="logo-img" src={logo} />
             </div>
-            {/* <label className="new_convo" htmlFor="pdfInput">
+            <label className="new_convo" htmlFor="pdfInput">
               <div className="icon-container">
                 <FiUpload className="bigger-icon" />
               </div>
@@ -86,7 +86,7 @@ function App() {
               </button>
               <div className="file-name">{fileName}</div>
             </form>
-            <div className="spinner"></div> */}
+            {/* <div className="spinner"></div> */}
           </div>
         </div>
 
