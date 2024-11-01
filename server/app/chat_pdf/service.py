@@ -1,10 +1,10 @@
 from PyPDF2 import PdfReader
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 
 from langchain.chains.question_answering import load_qa_chain
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 from .dto import PDFQuery
 import uuid
 
@@ -39,7 +39,7 @@ def read_pdf(pdf):
 def chat_pdf(id,query):
     
     embeddings = OpenAIEmbeddings()
-    docsearch = FAISS.load_local("data/" + id, embeddings)
+    docsearch = FAISS.load_local("data/" + id, embeddings, allow_dangerous_deserialization=True)
 
     chain = load_qa_chain(OpenAI(), chain_type="stuff")
 

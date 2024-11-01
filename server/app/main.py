@@ -10,7 +10,7 @@ from .chat_pdf import controller as chat_pdf
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    "http://localhost:8080",
+    "http://localhost:8000",
 ]
 
 app = FastAPI()
